@@ -13,9 +13,25 @@ In this HW, we will implement a very aged prediction problem from the financial 
 1. Python
 2. autoDocstring - Python Docstring Generator
 
+### Prerequisites [暫時-vvn 嘗試看看此方式]
+
+Install [**TA-Lib-Dependencies**](https://github.com/mrjbq7/ta-lib#dependencies)
+
+- Linux
+
+  Download [ta-lib-0.4.0-src.tar.gz](https://sourceforge.net/projects/ta-lib/files/ta-lib/0.4.0/ta-lib-0.4.0-src.tar.gz/download?use_mirror=nchc) and:
+
+  ```bash
+  $ tar -xzf ta-lib-0.4.0-src.tar.gz
+  $ cd ta-lib/
+  $ ./configure --prefix=/usr
+  $ make
+  $ sudo make install
+  ```
+
 ### Use `Poetry` to develop
 
-Install python3.9.7 (recommended use [asdf](https://asdf-vm.com/guide/getting-started.html))
+Install **python3.10.0** (recommended use [asdf](https://asdf-vm.com/guide/getting-started.html)) -> 安裝完 asdf 後，可參考 [vivian's notbook](https://hackmd.io/dNnq9rb4SNuWUCbukcT0MQ?view#asdf)
 
 1. init the project: (**vvn 已建立，可跳過**)
 

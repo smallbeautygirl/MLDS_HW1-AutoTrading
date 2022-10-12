@@ -8,6 +8,7 @@ packages = [{include = "auto_trading"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+TA-Lib = "^0.4.25"
 
 
 [build-system]

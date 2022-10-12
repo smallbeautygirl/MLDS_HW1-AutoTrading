@@ -1,0 +1,32 @@
+{
+    "python.autoComplete.extraPaths": [
+        "${workspaceFolder}/__pypackages__/3.9/lib"
+    ],
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/__pypackages__/3.9/lib"
+    ],
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.linting.pycodestyleEnabled": false,
+    "files.trimTrailingWhitespace": true,
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "on",
+    "editor.trimAutoWhitespace": true,
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "python.formatting.autopep8Args": [
+        "--aggressive",
+    ],
+    "python.linting.pylintArgs": [
+        "--enable=W0614"
+    ],
+    "python.envFile": "${workspaceFolder}/.env",
+    // "python.pythonPath": "/home/vivian/.asdf/shims/python",
+    "python.pythonPath": "/home/vivian/.pyenv/versions/3.9.5/bin/python3.9",
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${workspaceFolder}/__pypackages__/3.9/lib"
+    },
+}
