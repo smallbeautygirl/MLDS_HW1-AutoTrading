@@ -68,7 +68,7 @@ Install **python3.10.0** (recommended use [asdf](https://asdf-vm.com/guide/getti
    - 若沒有 activate virtual environment
 
      ```bash
-     poetry run python xxx.py
+     poetry run python train.py
      ```
 
 ## Dependencies
