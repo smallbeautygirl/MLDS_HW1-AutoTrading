@@ -13,22 +13,6 @@ In this HW, we will implement a very aged prediction problem from the financial 
 1. Python
 2. autoDocstring - Python Docstring Generator
 
-### Prerequisites [暫時-vvn 嘗試看看此方式]
-
-Install [**TA-Lib-Dependencies**](https://github.com/mrjbq7/ta-lib#dependencies)
-
-- Linux
-
-  Download [ta-lib-0.4.0-src.tar.gz](https://sourceforge.net/projects/ta-lib/files/ta-lib/0.4.0/ta-lib-0.4.0-src.tar.gz/download?use_mirror=nchc) and:
-
-  ```bash
-  $ tar -xzf ta-lib-0.4.0-src.tar.gz
-  $ cd ta-lib/
-  $ ./configure --prefix=/usr
-  $ make
-  $ sudo make install
-  ```
-
 ### Use `Poetry` to develop
 
 Install **python3.10.0** (recommended use [asdf](https://asdf-vm.com/guide/getting-started.html)) -> 安裝完 asdf 後，可參考 [vivian's notbook](https://hackmd.io/dNnq9rb4SNuWUCbukcT0MQ?view#asdf)
@@ -39,16 +23,16 @@ Install **python3.10.0** (recommended use [asdf](https://asdf-vm.com/guide/getti
    poetry new auto_trading
    ```
 
-2. add a package (ex: flask)
+2. add a package (ex: pandas)
 
    ```bash
-   poetry add flask
+   poetry add pandas
    ```
 
    - removes a package from the current list of installed packages
 
      ```bash
-     poetry remove flask
+     poetry remove pandas
      ```
 
    - To list all the available packages
@@ -57,35 +41,33 @@ Install **python3.10.0** (recommended use [asdf](https://asdf-vm.com/guide/getti
      poetry show
      ```
 
-3. Execute the entrypoint
+3. Install dependencies
+
+   - 法一： (若用 poetry -> Install dependencies from lock file)
+
+     ```bash=
+     poetry install
+     ```
+
+   - 法二： (pip)
+
+     ```bash
+     pip install -r requirement.txt
+     ```
+
+4. Execute the entrypoint
 
    - 若有 activate virtual environment (ex: poetry shell)
 
      ```bash
-     python manage.py
+     python trader.py
      ```
 
    - 若沒有 activate virtual environment
 
      ```bash
-     poetry run python train.py
+     poetry run python trader.py
      ```
-
-## Dependencies
-
-### Install dependency
-
-- 法一： (若用 poetry -> Install dependencies from lock file)
-
-  ```bash=
-  poetry install
-  ```
-
-- 法二： (pip)
-
-  ```bash
-  pip install -r requirement.txt
-  ```
 
 ### update [PyPI](https://pypi.org/) dependencies
 

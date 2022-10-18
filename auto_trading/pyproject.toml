@@ -8,7 +8,6 @@ packages = [{include = "auto_trading"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-TA-Lib = "^0.4.25"
 pandas = "^1.5.0"
 
 

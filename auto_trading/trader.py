@@ -26,6 +26,7 @@ def read_csv(csv_with_path: str) -> list:
 
 def stockStrategy():
     global status
+    print("tets")
     # print("openPrice", openPrice)
     # print("endPrice", endPrice)
     if len(total) < 2:
