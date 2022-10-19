@@ -85,6 +85,4 @@ if __name__ == '__main__':
                 maxPrice.append(row[1])
                 minPrice.append(row[2])
                 endPrice.append(row[3])
-        print("end", total)
-        print("count", len(total))
     csvfile.close()
