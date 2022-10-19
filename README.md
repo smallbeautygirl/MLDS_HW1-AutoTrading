@@ -60,7 +60,7 @@ Install **python3.10.0** (recommended use [asdf](https://asdf-vm.com/guide/getti
    - 若有 activate virtual environment (ex: poetry shell)
 
      ```bash
-     python trader.py
+     python trader.py --training "Training Data" --testing "Testing Data" --output output.csv
      ```
 
    - 若沒有 activate virtual environment
