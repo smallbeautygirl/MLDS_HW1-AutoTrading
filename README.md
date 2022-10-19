@@ -96,3 +96,12 @@ Install **python3.10.0** (recommended use [asdf](https://asdf-vm.com/guide/getti
 - [pylint](https://pypi.org/project/pylint/)
 - [asdf](https://asdf-vm.com/guide/getting-started.html#_1-install-dependencies)
 - [poetry](https://python-poetry.org/docs/basic-usage/)
+
+## 作法
+
+  本演算法主要是根據股價轉折點作為買進賣出的指標
+  首先會判斷昨天的開盤與收盤價差是否比前天差距小
+  若符合則判斷為股價走勢的轉折點
+  接著判斷前天的開盤與收盤的走勢情況
+  走勢為開低走高代表經過轉折會走弱，此情況判斷隔天需要賣股票
+  走勢為開高走低代筆經過轉折會走強，此情況判斷隔天需要買股票
