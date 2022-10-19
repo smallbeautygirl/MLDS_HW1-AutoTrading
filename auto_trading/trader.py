@@ -24,7 +24,12 @@ def read_csv(csv_with_path: str) -> list:
         return list(reader)
 
 
-def stockStrategy():
+def stockStrategy() -> int:
+    """stockStrategy
+
+    Returns:
+        int: action
+    """
     global status
     # print("openPrice", openPrice)
     # print("endPrice", endPrice)
@@ -45,19 +50,6 @@ def stockStrategy():
                 return 0
         else:
             return 0
-        # else:
-        #     if status == 1 and endPrice[len(
-        #             endPrice) - 1] < endPrice[len(endPrice) - 2]:
-        #         status -= 1
-        #         return -1
-        #     elif status == -1 and endPrice[len(endPrice) - 1] > endPrice[len(endPrice) - 2]:
-        #         status += 1
-        #         return 1
-        #     else:
-        #         return 0
-
-        # else:
-        #     return 0
 
 
 if __name__ == '__main__':
@@ -77,23 +69,13 @@ if __name__ == '__main__':
                         help='output file name')
 
     args = parser.parse_args()
-    # # The following part is an example.
-    # # You can modify it at will.
-    # training_data = load_data(args.training)
-
-    # trader = Trader()
-    # trader.train(training_data)
-    # testing_data = load_data(args.testing)
-
-    # read csv
-    # testing_data = pd.read_csv(args.testing)
 
     testing_data = read_csv(args.testing)
-    # print(testing_data)
+
     with open(args.output, 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
         for row in testing_data:
-            # print(row)
+
             if (len(total) != len(testing_data) - 1):
                 result = stockStrategy()
                 # method 1: (no action)
@@ -106,7 +88,3 @@ if __name__ == '__main__':
         print("end", total)
         print("count", len(total))
     csvfile.close()
-
-    #         # We will perform your action as the open price in the next day.
-    #         action = trader.predict_action(row)
-    #         output_file.write(action)
