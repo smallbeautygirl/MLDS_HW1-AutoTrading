@@ -52,6 +52,11 @@ def stockStrategy() -> int:
             return 0
 
 
+def calculate_bias(lookback_price_list: list, closed_price: float) -> float:
+    average = sum(lookback_price_list) / len(lookback_price_list)
+    return ((closed_price - average) / average) * 100
+
+
 if __name__ == '__main__':
     # You should not modify this part.
 
